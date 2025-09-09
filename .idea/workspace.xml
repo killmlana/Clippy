@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a0e6d00c-04da-4888-ba2f-636b2773b9fc" name="Changes" comment="feat: encoders and clients" />
+    <list default="true" id="a0e6d00c-04da-4888-ba2f-636b2773b9fc" name="Changes" comment="feat: knowledge graph store 📊">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -86,7 +88,7 @@
       <workItem from="1757274332103" duration="6997000" />
       <workItem from="1757302997664" duration="9201000" />
       <workItem from="1757396564185" duration="1629000" />
-      <workItem from="1757399116188" duration="2246000" />
+      <workItem from="1757399116188" duration="3046000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -120,7 +122,15 @@
       <option name="project" value="LOCAL" />
       <updated>1757401198410</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="feat: knowledge graph store 📊">
+      <option name="closed" value="true" />
+      <created>1757401408787</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1757401408787</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -131,7 +141,8 @@
     <MESSAGE value="feat: added tests" />
     <MESSAGE value="fix: added script for backfilling image and edge vectors" />
     <MESSAGE value="feat: encoders and clients" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: encoders and clients" />
+    <MESSAGE value="feat: knowledge graph store " />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: knowledge graph store " />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a0e6d00c-04da-4888-ba2f-636b2773b9fc" name="Changes" comment="feat: knowledge graph store 📊">
+    <list default="true" id="a0e6d00c-04da-4888-ba2f-636b2773b9fc" name="Changes" comment="feat: added schemas ⚙️📄">
+      <change afterPath="$PROJECT_DIR$/app/encoders/openclip.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/routes/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/routes/search.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/encoders.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/encoders.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +93,7 @@
       <workItem from="1757274332103" duration="6997000" />
       <workItem from="1757302997664" duration="9201000" />
       <workItem from="1757396564185" duration="1629000" />
-      <workItem from="1757399116188" duration="3046000" />
+      <workItem from="1757399116188" duration="4058000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -130,7 +135,31 @@
       <option name="project" value="LOCAL" />
       <updated>1757401408787</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="feat: added helper functions 🤝">
+      <option name="closed" value="true" />
+      <created>1757402318677</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1757402318677</updated>
+    </task>
+    <task id="LOCAL-00007" summary="feat: added helper functions 🤝">
+      <option name="closed" value="true" />
+      <created>1757402366484</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1757402366484</updated>
+    </task>
+    <task id="LOCAL-00008" summary="feat: added schemas ⚙️📄">
+      <option name="closed" value="true" />
+      <created>1757402427965</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1757402427965</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,7 +171,9 @@
     <MESSAGE value="fix: added script for backfilling image and edge vectors" />
     <MESSAGE value="feat: encoders and clients" />
     <MESSAGE value="feat: knowledge graph store " />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: knowledge graph store " />
+    <MESSAGE value="feat: added helper functions " />
+    <MESSAGE value="feat: added schemas ⚙️" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: added schemas ⚙️" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

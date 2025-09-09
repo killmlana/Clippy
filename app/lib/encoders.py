@@ -2,7 +2,6 @@ from __future__ import annotations
 import numpy as np
 
 try:
-    # Your scaffolds must expose these; keep signatures identical.
     from encoders.openclip import encode_image_1280, encode_text_1280  # type: ignore
 except Exception as e:
     raise RuntimeError(

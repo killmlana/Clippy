@@ -9,9 +9,9 @@ APP_VERSION = "0.2.0"
 
 def create_app() -> FastAPI:
     configure_logging()
-    app = FastAPI(title=APP_NAME, version=APP_VERSION)
+    application = FastAPI(title=APP_NAME, version=APP_VERSION)
 
-    app.add_middleware(
+    application.add_middleware(
         CORSMiddleware,
         allow_origins=settings.ALLOWED_ORIGINS,
         allow_credentials=True,
@@ -20,16 +20,16 @@ def create_app() -> FastAPI:
         max_age=86400,
     )
 
-    from .routes_search import router as search_router
-    from .routes_feedback import router as feedback_router
-    from .routes_images import router as images_router
-    app.include_router(search_router, prefix="/search", tags=["search"])
-    app.include_router(feedback_router, tags=["feedback"])
-    app.include_router(images_router, tags=["images"])
+    from app.routes.search import router as search_router
+    from app.routes.feedback import router as feedback_router
+    from app.routes.images import router as images_router
+    application.include_router(search_router, prefix="/search", tags=["search"])
+    application.include_router(feedback_router, tags=["feedback"])
+    application.include_router(images_router, tags=["images"])
 
-    @app.get("/healthz")
+    @application.get("/healthz")
     def healthz(): return {"ok": True, "name": APP_NAME, "version": APP_VERSION}
 
-    return app
+    return application
 
 app = create_app()

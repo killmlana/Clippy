@@ -2,7 +2,7 @@ from __future__ import annotations
 import numpy as np
 
 try:
-    from encoders.openclip import encode_image_1280, encode_text_1280  # type: ignore
+    from app.encoders.openclip import encode_image_1280, encode_text_1280
 except Exception as e:
     raise RuntimeError(
         "Missing encoders.openclip.encode_image_1280 / encode_text_1280. "

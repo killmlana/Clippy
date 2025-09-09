@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a0e6d00c-04da-4888-ba2f-636b2773b9fc" name="Changes" comment="feat: added schemas ⚙️📄">
-      <change afterPath="$PROJECT_DIR$/app/encoders/openclip.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/routes/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/routes/search.py" afterDir="false" />
+    <list default="true" id="a0e6d00c-04da-4888-ba2f-636b2773b9fc" name="Changes" comment="feat: added routes/images routes/feedback">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/encoders.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/encoders.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/core/logging.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/logging.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/core/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/search.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/search.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,22 +36,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python.safebooru_retrieval.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "FastAPI.Clippy.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.safebooru_retrieval.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Clippy" type="Python.FastAPI">
       <option name="file" value="$PROJECT_DIR$/main.py" />
@@ -93,7 +93,7 @@
       <workItem from="1757274332103" duration="6997000" />
       <workItem from="1757302997664" duration="9201000" />
       <workItem from="1757396564185" duration="1629000" />
-      <workItem from="1757399116188" duration="4058000" />
+      <workItem from="1757399116188" duration="4763000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -159,7 +159,23 @@
       <option name="project" value="LOCAL" />
       <updated>1757402427965</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="feat: added routes/search 🔍">
+      <option name="closed" value="true" />
+      <created>1757403204974</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1757403204974</updated>
+    </task>
+    <task id="LOCAL-00010" summary="feat: added routes/images routes/feedback">
+      <option name="closed" value="true" />
+      <created>1757403360907</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1757403360907</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,7 +189,9 @@
     <MESSAGE value="feat: knowledge graph store " />
     <MESSAGE value="feat: added helper functions " />
     <MESSAGE value="feat: added schemas ⚙️" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: added schemas ⚙️" />
+    <MESSAGE value="feat: added routes/search " />
+    <MESSAGE value="feat: added routes/images routes/feedback" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: added routes/images routes/feedback" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -187,5 +205,6 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Clippy$safebooru_retrieval.coverage" NAME="safebooru_retrieval Coverage Results" MODIFIED="1757149292781" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
+    <SUITE FILE_PATH="coverage/Clippy$Clippy.coverage" NAME="Clippy Coverage Results" MODIFIED="1757403855674" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

@@ -1,6 +1,6 @@
 from __future__ import annotations
 import logging
-from settings import settings
+from .settings import settings
 
 def configure_logging() -> None:
     logging.basicConfig(

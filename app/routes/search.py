@@ -7,13 +7,13 @@ from fastapi import APIRouter, File, Form, HTTPException, UploadFile
 from fastapi.responses import JSONResponse
 from qdrant_client.models import SearchParams
 
-from ..core.settings import settings
-from ..lib.qd_client import get_qdrant
-from ..encoders.openclip import encode_image_1280, encode_text_1280
-from ..lib.encoders import ensure_vec, cos_norm
-from ..lib import kg_store
-from ..helpers.scoring import combine_scores
-from ..helpers.filters import parse_tag_filters, or_filter
+from app.core.settings import settings
+from app.lib.qd_client import get_qdrant
+from app.encoders.openclip import encode_image_1280, encode_text_1280
+from app.lib.encoders import ensure_vec, cos_norm
+from app.lib import kg_store
+from app.helpers.scoring import combine_scores
+from app.helpers.filters import (parse_tag_filters, or_filter)
 
 router = APIRouter()
 

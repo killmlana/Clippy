@@ -4,8 +4,8 @@ from pathlib import Path
 
 class Settings:
     QDRANT_URL = os.getenv("QDRANT_URL", "http://localhost:6333")
-    QDRANT_COLLECTION = os.getenv("QDRANT_COLLECTION", "art_refs")
-    IMAGES_ROOT = Path(os.getenv("IMAGES_ROOT", "./data/images")).resolve()
+    QDRANT_COLLECTION = os.getenv("QDRANT_COLLECTION", "safebooru_union_clip")
+    IMAGES_ROOT = Path(os.getenv("IMAGES_ROOT", "./safebooru_union/ALL")).resolve()
     ALLOWED_ORIGINS = [o.strip() for o in os.getenv("ALLOWED_ORIGINS", "http://localhost:5173").split(",") if o.strip()]
     HNSW_EF = int(os.getenv("HNSW_EF", "128"))
     ALPHA = float(os.getenv("ALPHA", "0.2"))

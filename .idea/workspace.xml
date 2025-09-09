@@ -4,19 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a0e6d00c-04da-4888-ba2f-636b2773b9fc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Clippy.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/qdrant_init.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/safebooru_retrieval.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tags.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_main.http" afterDir="false" />
+    <list default="true" id="a0e6d00c-04da-4888-ba2f-636b2773b9fc" name="Changes" comment="fix: added script for backfilling image and edge vectors">
+      <change afterPath="$PROJECT_DIR$/app/core/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,11 +84,48 @@
       <workItem from="1757091851939" duration="9172000" />
       <workItem from="1757126890968" duration="13126000" />
       <workItem from="1757173790500" duration="8776000" />
+      <workItem from="1757208851414" duration="10510000" />
+      <workItem from="1757270557975" duration="3718000" />
+      <workItem from="1757274332103" duration="6997000" />
+      <workItem from="1757302997664" duration="9201000" />
+      <workItem from="1757396564185" duration="1629000" />
+      <workItem from="1757399116188" duration="1900000" />
     </task>
+    <task id="LOCAL-00001" summary="initial commit">
+      <option name="closed" value="true" />
+      <created>1757208918069</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1757208918069</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat: added tests">
+      <option name="closed" value="true" />
+      <created>1757396709932</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1757396709932</updated>
+    </task>
+    <task id="LOCAL-00003" summary="fix: added script for backfilling image and edge vectors">
+      <option name="closed" value="true" />
+      <created>1757396757369</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1757396757369</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial commit" />
+    <MESSAGE value="feat: added tests" />
+    <MESSAGE value="fix: added script for backfilling image and edge vectors" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: added script for backfilling image and edge vectors" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Clippy$safebooru_retrieval.coverage" NAME="safebooru_retrieval Coverage Results" MODIFIED="1757149292781" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />

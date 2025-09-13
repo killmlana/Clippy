@@ -1,6 +1,7 @@
 from __future__ import annotations
 import os
 from pathlib import Path
+from dotenv import load_dotenv; load_dotenv()
 
 class Settings:
     QDRANT_URL = os.getenv("QDRANT_URL", "http://localhost:6333")

@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a0e6d00c-04da-4888-ba2f-636b2773b9fc" name="Changes" comment="feat: image gen pipeline 🫩">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="a0e6d00c-04da-4888-ba2f-636b2773b9fc" name="Changes" comment="feat: added image assets">
+      <change afterPath="$PROJECT_DIR$/assets/sketch-generation-input.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/sketch-generation-output.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,6 +110,7 @@
       <workItem from="1757678040004" duration="13699000" />
       <workItem from="1757777700261" duration="3296000" />
       <workItem from="1757847499434" duration="5606000" />
+      <workItem from="1757877171996" duration="877000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -214,7 +216,15 @@
       <option name="project" value="LOCAL" />
       <updated>1757862934860</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="feat: added image assets">
+      <option name="closed" value="true" />
+      <created>1757877383656</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1757877383656</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -233,7 +243,8 @@
     <MESSAGE value="chore: absolute package paths " />
     <MESSAGE value="feat: image gen pipeline " />
     <MESSAGE value="feat: image gen pipeline " />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: image gen pipeline " />
+    <MESSAGE value="feat: added image assets" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: added image assets" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

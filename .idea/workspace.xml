@@ -108,7 +108,7 @@
       <workItem from="1757674816010" duration="1410000" />
       <workItem from="1757678040004" duration="13699000" />
       <workItem from="1757777700261" duration="3296000" />
-      <workItem from="1757847499434" duration="4616000" />
+      <workItem from="1757847499434" duration="5606000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -206,7 +206,15 @@
       <option name="project" value="LOCAL" />
       <updated>1757744415393</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="feat: image gen pipeline 🫩">
+      <option name="closed" value="true" />
+      <created>1757862934860</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1757862934860</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -223,6 +231,7 @@
     <MESSAGE value="feat: added routes/search " />
     <MESSAGE value="feat: added routes/images routes/feedback" />
     <MESSAGE value="chore: absolute package paths " />
+    <MESSAGE value="feat: image gen pipeline " />
     <MESSAGE value="feat: image gen pipeline " />
     <option name="LAST_COMMIT_MESSAGE" value="feat: image gen pipeline " />
   </component>

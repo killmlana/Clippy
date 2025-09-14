@@ -16,7 +16,7 @@ The project aims to refine the generative workflow of image generation models by
 | Vector Database | **Qdrant Server**, **qdrant-client** | HNSW index; supports named vectors |
 | Storage | **Filesystem** under `IMAGES_ROOT` | Image paths stored in Qdrant payloads |
 | Config | **python-dotenv** | `.env` in repo root |
-| Observability/Utils | `tqdm` (progress), logging via Uvicorn/stdlib | (Optional) `loguru` |
+| Observability/Utils | `tqdm` (progress), logging via Uvicorn/stdlib |
 | Testing & Tools | **pytest**, **httpie/curl**, VS Code **REST Client** |
 | **Frontend Client** | **Vite + React + TypeScript** | Tailwind CSS, **shadcn/ui**, **lucide-react**, **Fabric.js** for sketch UI;
 | Edit/Gen | Vertex AI / SDXL workflow

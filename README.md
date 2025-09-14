@@ -182,13 +182,16 @@ Providers map these roles as follows:
 
 I tried abstract sketches with very satisfactory results.
 
-Input:
+## Input:
+
 ![retrieval-input](https://github.com/killmlana/Clippy/blob/master/assets/retrieval-input.png)
 
-Output:
+## Output:
+
 ![retrieval-output](https://github.com/killmlana/Clippy/blob/master/assets/retrieval-output.png)
 
-Nearest Output:
+## Nearest Output:
+
 ![nearest-retrieval-output](https://github.com/killmlana/Clippy/blob/master/assets/retrival-output-nearest.webp)
 
 ### Data Flow

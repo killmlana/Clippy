@@ -1,0 +1,216 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* Tailwind dark variant helper (kept) */
+@custom-variant dark (&:is(.dark *));
+
+/* === Core palette (dichrome) === */
+:root {
+    /* base tokens */
+    --bg-hex: #11111b;           /* background */
+    --fg-hex: #e6e7eb;           /* foreground text */
+    --muted-hex: #2a2a31;        /* subtle surfaces / borders */
+    --accent-hex: #f38ba8;       /* primary/accent */
+    --ring-hex: #a4a6ad;
+
+    /* system */
+    color-scheme: dark;
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    /* radius scale */
+    --radius: 0.625rem;
+
+    /* map to shadcn/tw variables */
+    --background: var(--bg-hex);
+    --foreground: var(--fg-hex);
+
+    --card: var(--bg-hex);
+    --card-foreground: var(--fg-hex);
+
+    --popover: var(--bg-hex);
+    --popover-foreground: var(--fg-hex);
+
+    --primary: var(--accent-hex);
+    --primary-foreground: var(--bg-hex);
+
+    --secondary: var(--muted-hex);
+    --secondary-foreground: var(--fg-hex);
+
+    --muted: var(--muted-hex);
+    --muted-foreground: #b5b9c6;
+
+    --accent: var(--accent-hex);
+    --accent-foreground: var(--bg-hex);
+
+    --destructive: #ff5a5f; /* not used often; safe red */
+    --border: var(--muted-hex);
+    --input: #1a1b21;
+    --ring: var(--ring-hex);
+
+    /* charts (kept but neutralized toward accent scheme) */
+    --chart-1: var(--accent-hex);
+    --chart-2: #c08aa5;
+    --chart-3: #8a6b7a;
+    --chart-4: #f0a7b9;
+    --chart-5: #6b5660;
+
+    /* sidebar (if used) */
+    --sidebar: var(--bg-hex);
+    --sidebar-foreground: var(--fg-hex);
+    --sidebar-primary: var(--accent-hex);
+    --sidebar-primary-foreground: var(--bg-hex);
+    --sidebar-accent: var(--muted-hex);
+    --sidebar-accent-foreground: var(--fg-hex);
+    --sidebar-border: var(--muted-hex);
+    --sidebar-ring: var(--ring-hex);
+}
+
+/* Keep dark class same palette (explicit) */
+.dark {
+    --background: var(--bg-hex);
+    --foreground: var(--fg-hex);
+    --card: var(--bg-hex);
+    --card-foreground: var(--fg-hex);
+    --popover: var(--bg-hex);
+    --popover-foreground: var(--fg-hex);
+    --primary: var(--accent-hex);
+    --primary-foreground: var(--bg-hex);
+    --secondary: var(--muted-hex);
+    --secondary-foreground: var(--fg-hex);
+    --muted: var(--muted-hex);
+    --muted-foreground: #b5b9c6;
+    --accent: var(--accent-hex);
+    --accent-foreground: var(--bg-hex);
+    --destructive: #ff5a5f;
+    --border: var(--muted-hex);
+    --input: #1a1b21;
+    --ring: var(--ring-hex);
+    --chart-1: var(--accent-hex);
+    --chart-2: #c08aa5;
+    --chart-3: #8a6b7a;
+    --chart-4: #f0a7b9;
+    --chart-5: #6b5660;
+    --sidebar: var(--bg-hex);
+    --sidebar-foreground: var(--fg-hex);
+    --sidebar-primary: var(--accent-hex);
+    --sidebar-primary-foreground: var(--bg-hex);
+    --sidebar-accent: var(--muted-hex);
+    --sidebar-accent-foreground: var(--fg-hex);
+    --sidebar-border: var(--muted-hex);
+    --sidebar-ring: var(--ring-hex);
+}
+
+/* Inline theme mapping for Tailwind @theme (kept) */
+@theme inline {
+    --radius-sm: calc(var(--radius) - 4px);
+    --radius-md: calc(var(--radius) - 2px);
+    --radius-lg: var(--radius);
+    --radius-xl: calc(var(--radius) + 4px);
+
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --color-card: var(--card);
+    --color-card-foreground: var(--card-foreground);
+    --color-popover: var(--popover);
+    --color-popover-foreground: var(--popover-foreground);
+    --color-primary: var(--primary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-secondary: var(--secondary);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-muted: var(--muted);
+    --color-muted-foreground: var(--muted-foreground);
+    --color-accent: var(--accent);
+    --color-accent-foreground: var(--accent-foreground);
+    --color-destructive: var(--destructive);
+    --color-border: var(--border);
+    --color-input: var(--input);
+    --color-ring: var(--ring);
+    --color-chart-1: var(--chart-1);
+    --color-chart-2: var(--chart-2);
+    --color-chart-3: var(--chart-3);
+    --color-chart-4: var(--chart-4);
+    --color-chart-5: var(--chart-5);
+    --color-sidebar: var(--sidebar);
+    --color-sidebar-foreground: var(--sidebar-foreground);
+    --color-sidebar-primary: var(--sidebar-primary);
+    --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+    --color-sidebar-accent: var(--sidebar-accent);
+    --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+    --color-sidebar-border: var(--sidebar-border);
+    --color-sidebar-ring: var(--sidebar-ring);
+}
+
+/* === Center the whole app === */
+html, body, #root {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    min-width: 320px;
+
+    /* center everything */
+    min-height: 100dvh;
+    display: grid;
+    place-items: center;
+
+    /* theme */
+    background-color: var(--background);
+    color: var(--foreground);
+}
+
+/* Make immediate children nicely centered & constrained */
+#root > * {
+    width: min(96vw, 1200px);
+    margin-inline: auto;
+}
+
+/* Optional: if you're using a .container wrapper like in your older App */
+.container {
+    width: min(96vw, 1200px);
+    margin-inline: auto;
+    display: grid;
+    gap: 1rem;
+    justify-items: center; /* center child blocks */
+}
+
+/* Links & buttons adopt accent */
+a {
+    color: var(--accent);
+    text-decoration: none;
+}
+a:hover { opacity: 0.9; }
+
+button {
+    border-radius: 8px;
+    border: 1px solid color-mix(in oklch, var(--accent) 40%, transparent);
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: var(--secondary);
+    color: var(--foreground);
+    cursor: pointer;
+    transition: box-shadow .2s, transform .05s, border-color .2s, opacity .2s;
+}
+button:hover { border-color: var(--accent); }
+button:active { transform: translateY(1px); }
+button:focus, button:focus-visible {
+    outline: 4px auto var(--accent);
+    box-shadow: 0 0 0 4px color-mix(in oklch, var(--accent) 25%, transparent);
+}
+
+/* Headings */
+h1 { font-size: 2rem; line-height: 1.2; margin: 0; color: var(--accent); }
+
+/* Tailwind base hook (kept) */
+@layer base {
+    * { @apply border-border outline-ring/50; }
+    body { @apply bg-background text-foreground; }
+}

@@ -4,21 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a0e6d00c-04da-4888-ba2f-636b2773b9fc" name="Changes" comment="chore: absolute package paths 🫩">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/helpers/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/lib/gemini/client.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/lib/gemini/images.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/lib/gemini/prompting.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/lib/gemini/utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/lib/gemini/vision.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/routes/generate_image.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="a0e6d00c-04da-4888-ba2f-636b2773b9fc" name="Changes" comment="feat: image gen pipeline 🫩">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/core/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/images.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/images.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +24,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;killmlana&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/killmlana/Clippy.git&quot;,
+    &quot;accountId&quot;: &quot;a80db911-4e01-4a58-a451-6fee07a88548&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -107,7 +106,9 @@
       <workItem from="1757581598648" duration="10752000" />
       <workItem from="1757620484857" duration="25122000" />
       <workItem from="1757674816010" duration="1410000" />
-      <workItem from="1757678040004" duration="13151000" />
+      <workItem from="1757678040004" duration="13699000" />
+      <workItem from="1757777700261" duration="3296000" />
+      <workItem from="1757847499434" duration="4616000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -197,7 +198,15 @@
       <option name="project" value="LOCAL" />
       <updated>1757404177339</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="feat: image gen pipeline 🫩">
+      <option name="closed" value="true" />
+      <created>1757744415393</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1757744415393</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -214,7 +223,8 @@
     <MESSAGE value="feat: added routes/search " />
     <MESSAGE value="feat: added routes/images routes/feedback" />
     <MESSAGE value="chore: absolute package paths " />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: absolute package paths " />
+    <MESSAGE value="feat: image gen pipeline " />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: image gen pipeline " />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -228,6 +238,6 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Clippy$safebooru_retrieval.coverage" NAME="safebooru_retrieval Coverage Results" MODIFIED="1757149292781" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
-    <SUITE FILE_PATH="coverage/Clippy$Clippy.coverage" NAME="Clippy Coverage Results" MODIFIED="1757743737873" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/Clippy$Clippy.coverage" NAME="Clippy Coverage Results" MODIFIED="1757847588861" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

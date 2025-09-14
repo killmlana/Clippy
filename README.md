@@ -194,6 +194,18 @@ I tried abstract sketches with very satisfactory results.
 
 ![nearest-retrieval-output](https://github.com/killmlana/Clippy/blob/master/assets/retrival-output-nearest.webp)
 
+### Style transfer (from sketch)
+
+Results while using style-transfer with Google Vertex Ai Imagen 3 model
+
+## Input:
+
+![sketch-input](https://github.com/killmlana/Clippy/blob/master/assets/sketch-generation-input.png)
+
+## Output using pixel art style:
+
+![sketch-generation-output](https://github.com/killmlana/Clippy/blob/master/assets/sketch-generation-output.png)
+
 ### Data Flow
 
 **Ingestion (offline):**

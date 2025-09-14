@@ -178,6 +178,21 @@ Providers map these roles as follows:
 [3]: https://arxiv.org/abs/2308.06721?utm_source=chatgpt.com "IP-Adapter: Text Compatible Image Prompt Adapter for Text-to-Image Diffusion Models"
 [4]: https://cloud.google.com/vertex-ai/generative-ai/docs/image/overview?utm_source=chatgpt.com "Imagen on Vertex AI | AI Image Generator"
 
+### 🔎 Retrieval Results
+
+I tried abstract sketches with very satisfactory results.
+
+## Input:
+
+![retrieval-input](https://github.com/killmlana/Clippy/blob/master/assets/retrieval-input.png)
+
+## Output:
+
+![retrieval-output](https://github.com/killmlana/Clippy/blob/master/assets/retrieval-output.png)
+
+## Nearest Output:
+
+![nearest-retrieval-output](https://github.com/killmlana/Clippy/blob/master/assets/retrival-output-nearest.webp)
 
 ### Data Flow
 

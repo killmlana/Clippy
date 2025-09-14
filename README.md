@@ -182,15 +182,15 @@ Providers map these roles as follows:
 
 I tried abstract sketches with very satisfactory results.
 
-## Input:
+#### Input:
 
 ![retrieval-input](https://github.com/killmlana/Clippy/blob/master/assets/retrieval-input.png)
 
-## Output:
+#### Output:
 
 ![retrieval-output](https://github.com/killmlana/Clippy/blob/master/assets/retrieval-output.png)
 
-## Nearest Output:
+#### Nearest Output:
 
 ![nearest-retrieval-output](https://github.com/killmlana/Clippy/blob/master/assets/retrival-output-nearest.webp)
 
@@ -198,11 +198,11 @@ I tried abstract sketches with very satisfactory results.
 
 Results while using style-transfer with Google Vertex Ai Imagen 3 model
 
-## Input:
+#### Input:
 
 ![sketch-input](https://github.com/killmlana/Clippy/blob/master/assets/sketch-generation-input.png)
 
-## Output using pixel art style:
+#### Output using pixel art style:
 
 ![sketch-generation-output](https://github.com/killmlana/Clippy/blob/master/assets/sketch-generation-output.png)
 

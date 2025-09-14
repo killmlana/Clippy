@@ -193,7 +193,7 @@ Providers map these roles as follows:
 1. Client sends **multipart** (sketch/image) and/or **JSON** (`queryText`, weights, filters).
 2. API **preprocesses** → **embeds** → **weights** → **hybrid query**.
 3. Qdrant returns top-K; API optionally exact re-ranks; responses include `id`, `score`, `path`, `payload`.
-4. Client previews images; optional edit/generation step can run thereafter.
+4. Client previews images; edit/generation step can run thereafter.
 
 ---
 
@@ -211,11 +211,6 @@ Providers map these roles as follows:
 ### `POST /search/hybrid`
 
 Hybrid similarity using image/edge/text with per-request weights.
-
-* **Multipart** fields:
-  `sketch` (PNG/JPG), `image` (repeatable), `queryText`, `wImg`, `wEdge`, `wTxt`, `limit`, `ef`, `exact`, `tagFilters`, `personalize`
-* **JSON** alternative (text-only/param-only) supported.
-* **Response**: `{ count, results: [{ id, score, path, payload }], weights }`
 
 ### `GET /image/{image_id}`
 

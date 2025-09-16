@@ -1,4 +1,4 @@
-from __future__ import annotations
+from future import annotations
 import os
 from pathlib import Path
 from dotenv import load_dotenv; load_dotenv()
@@ -16,5 +16,9 @@ class Settings:
     DELTA_SAVE = float(os.getenv("DELTA_SAVE", "0.10"))
     KG_STORE = Path(os.getenv("KG_STORE", "./data/kg_store.json")).resolve()
     LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO").upper()
+    MODEL_NAME = os.getenv("MODEL_NAME", "ViT-H-14")
+    PRETRAINED = os.getenv("PRETRAINED", "laion2b_s32b_b79k")
+    DEVICE = os.getenv("DEVICE", "cuda")
+    PRECISION = os.getenv("PRECISION", "fp16")
 
 settings = Settings()

@@ -16,7 +16,7 @@ The project aims to refine the generative workflow of image generation models by
 | Vector Database | **Qdrant Server**, **qdrant-client** | HNSW index; supports named vectors |
 | Storage | **Filesystem** under `IMAGES_ROOT` | Image paths stored in Qdrant payloads |
 | Config | **python-dotenv** | `.env` in repo root |
-| Observability/Utils | `tqdm` (progress), logging via Uvicorn/stdlib | (Optional) `loguru` |
+| Observability/Utils | `tqdm` (progress), logging via Uvicorn/stdlib |
 | Testing & Tools | **pytest**, **httpie/curl**, VS Code **REST Client** |
 | **Frontend Client** | **Vite + React + TypeScript** | Tailwind CSS, **shadcn/ui**, **lucide-react**, **Fabric.js** for sketch UI;
 | Edit/Gen | Vertex AI / SDXL workflow
@@ -182,17 +182,29 @@ Providers map these roles as follows:
 
 I tried abstract sketches with very satisfactory results.
 
-## Input:
+#### Input:
 
 ![retrieval-input](https://github.com/killmlana/Clippy/blob/master/assets/retrieval-input.png)
 
-## Output:
+#### Output:
 
 ![retrieval-output](https://github.com/killmlana/Clippy/blob/master/assets/retrieval-output.png)
 
-## Nearest Output:
+#### Nearest Output:
 
 ![nearest-retrieval-output](https://github.com/killmlana/Clippy/blob/master/assets/retrival-output-nearest.webp)
+
+### Style transfer (from sketch)
+
+Results while using style-transfer with Google Vertex Ai Imagen 3 model
+
+#### Input:
+
+![sketch-input](https://github.com/killmlana/Clippy/blob/master/assets/sketch-generation-input.png)
+
+#### Output using pixel art style:
+
+![sketch-generation-output](https://github.com/killmlana/Clippy/blob/master/assets/sketch-generation-output.png)
 
 ### Data Flow
 

@@ -296,6 +296,8 @@ Providers map these roles as follows:
 [3]: https://arxiv.org/abs/2308.06721?utm_source=chatgpt.com "IP-Adapter: Text Compatible Image Prompt Adapter for Text-to-Image Diffusion Models"
 [4]: https://cloud.google.com/vertex-ai/generative-ai/docs/image/overview?utm_source=chatgpt.com "Imagen on Vertex AI | AI Image Generator"
 
+**Discussed more in → [how-it-works.md](How it works)**
+
 ### 🔎 Retrieval Results
 
 I tried abstract sketches with very satisfactory results.

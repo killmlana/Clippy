@@ -77,8 +77,8 @@ QDRANT_API_KEY= #optional
 QDRANT_COLLECTION=safebooru_union_clip
 
 # Embeddings
-MODEL_NAME=ViT-bigG-14
-PRETRAINED=laion2b_s39b_b160k
+OPENCLIP_MODEL=ViT-bigG-14
+OPENCLIP_PRETRAINED=laion2b_s39b_b160k
 DEVICE=cuda            # or cpu
 PRECISION=fp32
 

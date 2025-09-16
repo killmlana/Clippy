@@ -31,12 +31,20 @@ The project aims to refine the generative workflow of image generation models by
 - Optional GPU for faster embedding (OpenCLIP)
 - A dataset (e.g., your Danbooru/Safebooru subset) and `tags.txt`
 
-### 1) Run Qdrant
+### 1) Run Qdrant and initialise DB with the suitable configuration 
+
 ```bash
 docker run -p 6333:6333 -p 6334:6334 \
   -v $PWD/qdrant_storage:/qdrant/storage \
   qdrant/qdrant:latest
-# UI: http://localhost:6333/dashboard
+
+python lib/qdrant_init.py \
+  --qdrant-url $QDRANT_URL \
+  --collection $QDRANT_COLLECTION \
+  --model ViT-bigG-14 \
+  --pretrained laion2b_s39b_b160k \
+  --device cuda \
+  --add-edge-vector
 ````
 
 ### 2) Create venv & install

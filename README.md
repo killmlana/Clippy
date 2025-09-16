@@ -23,7 +23,82 @@ The project aims to refine the generative workflow of image generation models by
 
 ---
 
-## ⛳ Quick Start
+## 🐳 Docker Setup (Recommended)
+
+This is the easiest way to get started with Clippy.
+
+### Requirements
+- **Docker** and **Docker Compose**
+
+### 1) Configure environment
+
+Create a `.env` file in the repository root. The `docker-compose.yml` file is configured to load this file, so all environment variables for the Docker setup should be managed here.
+
+You can copy the example below, but be sure to fill in your Google Cloud credentials if you want to use the image generation features.
+
+```env
+# Qdrant - These are the defaults for the docker-compose setup
+QDRANT_URL=http://qdrant:6333
+QDRANT_API_KEY= #optional
+QDRANT_COLLECTION=safebooru_union_clip
+
+# Embeddings
+OPENCLIP_MODEL=ViT-bigG-14
+OPENCLIP_PRETRAINED=laion2b_s39b_b160k
+OPENCLIP_DEVICE=cpu            # or cuda if you have a GPU and nvidia-docker
+OPENCLIP_PRECISION=fp32
+
+# Ingestion
+IMAGES_ROOT=/app/data/safebooru # This path is inside the container
+
+# Image Gen (Optional)
+GOOGLE_GENAI_USE_VERTEXAI=true
+GOOGLE_CLOUD_PROJECT= # your-gcp-project-id
+GOOGLE_CLOUD_LOCATION= # us-central1
+GOOGLE_APPLICATION_CREDENTIALS= # /app/gcp-credentials.json
+PROMPT_LOG_LEVEL=DEBUG
+GEMINI_VISION_MODEL=gemini-1.5-flash
+```
+
+### 2) Run the application
+
+```bash
+docker-compose up --build
+```
+
+This command will:
+- Build the frontend and backend Docker images.
+- Start the FastAPI application and the Qdrant vector database.
+
+You can access the frontend at [http://localhost:5173](http://localhost:5173) and the API at [http://localhost:8000](http://localhost:8000).
+
+### 3) Ingest data
+
+To ingest your data, you'll need to run the ingestion scripts inside the `app` container.
+
+First, place your images in the `data/safebooru` directory (or the directory you specified in `IMAGES_ROOT`).
+
+Then, run the following commands:
+
+```bash
+# Initialize the Qdrant collection
+docker-compose exec app python lib/qdrant_init.py
+
+# Ingest the images
+docker-compose exec app python qdrant/embed_and_upsert.py \
+  --manifest "$MANIFEST" \
+  --text-template "an illustration with {tags}"
+```
+
+### 4) Stop the application
+
+```bash
+docker-compose down
+```
+
+---
+
+## ⛳ Manual Setup
 
 ### Requirements
 - Python **3.10+**
@@ -79,8 +154,8 @@ QDRANT_COLLECTION=safebooru_union_clip
 # Embeddings
 OPENCLIP_MODEL=ViT-bigG-14
 OPENCLIP_PRETRAINED=laion2b_s39b_b160k
-DEVICE=cuda            # or cpu
-PRECISION=fp32
+OPENCLIP_DEVICE=cpu            # or cuda if you have a GPU and nvidia-docker
+OPENCLIP_PRECISION=fp32
 
 # Ingestion
 IMAGES_ROOT=/abs/path/to/images

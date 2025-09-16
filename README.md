@@ -73,7 +73,7 @@ Create `.env` in the repo root:
 ```env
 # Qdrant
 QDRANT_URL=http://localhost:6333
-QDRANT_API_KEY=
+QDRANT_API_KEY= #optional
 QDRANT_COLLECTION=safebooru_union_clip
 
 # Embeddings

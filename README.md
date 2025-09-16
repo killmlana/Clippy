@@ -12,7 +12,7 @@ Clippy is a FastAPI service and script suite for **style-aware visual retrieval*
 | Language & Runtime | **Python 3.10+** | venv/uv recommended |
 | API Framework | **FastAPI**, **Uvicorn** | Pydantic for schema validation |
 | Embeddings | **PyTorch**, **open-clip-torch** | `Pillow`, `opencv-python` for I/O & edge-maps |
-| Vector Database | **Qdrant Server**, **qdrant-client** | HNSW index; supports named vectors |
+| Vector Database | **Qdrant Server** with 120,000 images of digital artworks, **qdrant-client** | HNSW index; supports named vectors |
 | Storage | **Filesystem** under `IMAGES_ROOT` | Image paths stored in Qdrant payloads |
 | Config | **python-dotenv** | `.env` in repo root |
 | Observability/Utils | `tqdm` (progress), logging via Uvicorn/stdlib |

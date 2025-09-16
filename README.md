@@ -80,7 +80,6 @@ GEMINI_VISION_MODEL=gemini-2.5-flash
 
 ```bash
 # Initialize DB with the required configuration
-
 python lib/qdrant_init.py \
   --qdrant-url $QDRANT_URL \ 
   --collection $QDRANT_COLLECTION \

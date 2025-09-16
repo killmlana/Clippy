@@ -22,7 +22,7 @@ Clippy is a FastAPI service and script suite for **style-aware visual retrieval*
 
 ---
 
-## 🐳 Docker Setup (Recommended)
+## 🐳 Docker Setup (Not Tested)
 
 This is the easiest way to get started with Clippy.
 
@@ -89,7 +89,7 @@ docker-compose exec app python lib/qdrant_init.py \
   --device cuda \
   --add-edge-vector
 
-# Download the dataset
+# Download the dataset to the container or add the volume to docker-compose.yml
 docker-compose exec app python scripts/retrieve_safebooru.py \
   --tags-file ./tags.txt \
   --out ./data/safebooru \
@@ -367,4 +367,4 @@ Uses the provided references to generate images.
 
 ---
 
-*Last updated: 2025-09-14*
+*Last updated: 2025-09-16*

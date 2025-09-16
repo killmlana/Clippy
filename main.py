@@ -4,6 +4,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.core.settings import settings
 from app.core.logging import configure_logging
 from dotenv import load_dotenv
+from fastapi.staticfiles import StaticFiles
 load_dotenv()
 
 APP_NAME = "Clippy"
@@ -30,6 +31,8 @@ def create_app() -> FastAPI:
     application.include_router(feedback_router, prefix="/api", tags=["feedback"])
     application.include_router(images_router, prefix="/api", tags=["images"])
     application.include_router(generate_image_router, prefix="/api", tags=["images"])
+
+    application.mount("/", StaticFiles(directory="static", html=True), name="static")
 
     @application.get("/healthz")
     def healthz(): return {"ok": True, "name": APP_NAME, "version": APP_VERSION}

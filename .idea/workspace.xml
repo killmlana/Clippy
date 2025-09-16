@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a0e6d00c-04da-4888-ba2f-636b2773b9fc" name="Changes" comment="feat: added requirements.txt">
+    <list default="true" id="a0e6d00c-04da-4888-ba2f-636b2773b9fc" name="Changes" comment="fix: env vars">
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/core/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +116,7 @@
       <workItem from="1757847499434" duration="5606000" />
       <workItem from="1757877171996" duration="3817000" />
       <workItem from="1758002725908" duration="3378000" />
-      <workItem from="1758011151763" duration="3120000" />
+      <workItem from="1758011151763" duration="9301000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -243,7 +246,31 @@
       <option name="project" value="LOCAL" />
       <updated>1758002877068</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="chore: build issues.">
+      <option name="closed" value="true" />
+      <created>1758037367462</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1758037367462</updated>
+    </task>
+    <task id="LOCAL-00018" summary="chore: build issues.">
+      <option name="closed" value="true" />
+      <created>1758037629922</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1758037629922</updated>
+    </task>
+    <task id="LOCAL-00019" summary="fix: env vars">
+      <option name="closed" value="true" />
+      <created>1758041004610</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1758041004610</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -275,7 +302,9 @@
     <MESSAGE value="feat: image gen pipeline " />
     <MESSAGE value="feat: added image assets" />
     <MESSAGE value="feat: added requirements.txt" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: added requirements.txt" />
+    <MESSAGE value="chore: build issues." />
+    <MESSAGE value="fix: env vars" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: env vars" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

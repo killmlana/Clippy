@@ -1,0 +1,49 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./app:/app/app
+      - ./main.py:/app/main.py
+      - ./qdrant:/app/qdrant
+      - ./lib:/app/lib
+      - ./scripts:/app/scripts
+      - ./assets:/app/assets
+      - ./tags.txt:/app/tags.txt
+      - ./test_main.http:/app/test_main.http
+      - ./requirements.txt:/app/requirements.txt
+      - ./pyproject.toml:/app/pyproject.toml
+      - ./.dockerignore:/app/.dockerignore
+      - ./.gitignore:/app/.gitignore
+      - ./README.md:/app/README.md
+      - ./Dockerfile:/app/Dockerfile
+    environment:
+      - QDRANT_URL=http://qdrant:6333
+      - OPENCLIP_MODEL=ViT-H-14
+      - OPENCLIP_PRETRAINED=laion2B-s32B-b79K
+      - DEVICE=cpu
+      - PRECISION=fp32
+      - IMAGES_ROOT=/app/assets
+      - GOOGLE_GENAI_USE_VERTEXAI=true
+      - GOOGLE_CLOUD_PROJECT=
+      - GOOGLE_CLOUD_LOCATION=
+      - GOOGLE_APPLICATION_CREDENTIALS=
+      - PROMPT_LOG_LEVEL=DEBUG
+      - GEMINI_VISION_MODEL=gemini-2.5-flash
+    depends_on:
+      - qdrant
+
+  qdrant:
+    image: qdrant/qdrant:latest
+    ports:
+      - "6333:6333"
+      - "6334:6334"
+    volumes:
+      - ./qdrant_storage:/qdrant/storage
+
+networks:
+  default:
+    driver: bridge

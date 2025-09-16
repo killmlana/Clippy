@@ -20,5 +20,8 @@ class Settings:
     PRETRAINED = os.getenv("PRETRAINED", "laion2b_s32b_b79k")
     DEVICE = os.getenv("DEVICE", "cuda")
     PRECISION = os.getenv("PRECISION", "fp16")
+    GOOGLE_GENAI_USE_VERTEXAI = os.getenv("GOOGLE_GENAI_USE_VERTEXAI", "false").lower() in ("true", "1", "t")
+    PROMPT_LOG_LEVEL = os.getenv("PROMPT_LOG_LEVEL", "INFO").upper()
+    GEMINI_VISION_MODEL = os.getenv("GEMINI_VISION_MODEL", "gemini-2.5-flash")
 
 settings = Settings()

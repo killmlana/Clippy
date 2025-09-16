@@ -22,7 +22,7 @@ Clippy is a FastAPI service and script suite for **style-aware visual retrieval*
 
 ---
 
-## 🐳 Docker Setup (Recommended)
+## 🐳 Docker Setup (Not Tested)
 
 This is the easiest way to get started with Clippy.
 

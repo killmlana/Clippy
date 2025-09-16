@@ -31,7 +31,7 @@ The project aims to refine the generative workflow of image generation models by
 - Optional GPU for faster embedding (OpenCLIP)
 - A dataset (e.g., your Danbooru/Safebooru subset) and `tags.txt`
 
-### 1) Run Qdrant and initialise DB with the suitable configuration 
+### 1) Run Qdrant
 
 ```bash
 docker run -p 6333:6333 -p 6334:6334 \

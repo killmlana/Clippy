@@ -42,7 +42,5 @@ Clippy’s hybrid retrieval (sketch + edge + text) provides structured input to 
 1. **Prompt Construction**: User’s text query, tags, and knowledge-graph preferences are combined into a descriptive prompt.
 2. **Reference Conditioning**: Retrieved images (subject or style) can be passed as conditioning examples for Imagen 3.
 3. **Sketch as Guidance**: Sketches are processed into edge maps or masks that guide composition during generation.
-4. **Editing Workflows**: For edits, masks are generated either by the user or automatically from the sketch/selection, then applied in the Imagen request.
-5. **Feedback Loop**: Generated images are re-embedded, tagged, and fed back into Clippy’s knowledge graph so that user interactions refine future outputs.
 
 By combining hybrid search with Imagen 3’s generation and editing capabilities, Clippy provides artists with a system that delivers reference-aware, style-consistent, and controllable outputs.

@@ -41,6 +41,7 @@ docker run -p 6333:6333 -p 6334:6334 \
 
 ### 2) Create venv & install
 
+```bash
 python -m venv .venv
 # macOS/Linux
 source .venv/bin/activate

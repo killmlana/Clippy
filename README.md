@@ -57,7 +57,7 @@ GOOGLE_CLOUD_PROJECT= # your-gcp-project-id
 GOOGLE_CLOUD_LOCATION= # us-central1
 GOOGLE_APPLICATION_CREDENTIALS= # /app/gcp-credentials.json
 PROMPT_LOG_LEVEL=DEBUG
-GEMINI_VISION_MODEL=gemini-1.5-flash
+GEMINI_VISION_MODEL=gemini-2.5-flash
 ```
 
 ### 2) Run the application

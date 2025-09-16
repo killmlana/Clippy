@@ -32,19 +32,37 @@ The project aims to refine the generative workflow of image generation models by
 - A dataset (e.g., your Danbooru/Safebooru subset) and `tags.txt`
 
 ### 1) Run Qdrant
+
 ```bash
 docker run -p 6333:6333 -p 6334:6334 \
   -v $PWD/qdrant_storage:/qdrant/storage \
   qdrant/qdrant:latest
-# UI: http://localhost:6333/dashboard
 ````
 
 ### 2) Create venv & install
 
 ```bash
 python -m venv .venv
-source .venv/bin/activate   # Windows: .\.venv\Scripts\activate
-pip install -U pip wheel
+# macOS/Linux
+source .venv/bin/activate
+# Windows
+# .\.venv\Scripts\activate
+
+# Upgrade basics
+pip install -U pip setuptools wheel
+
+# Install project deps from requirements.txt
+pip install -r requirements.txt
+
+# (Optional) If Torch is NOT pinned in requirements.txt or you want a specific build:
+# CUDA 12.1 (Linux/Windows GPU)
+# pip install --index-url https://download.pytorch.org/whl/cu121 torch torchvision torchaudio
+# CPU-only (no GPU)
+# pip install --index-url https://download.pytorch.org/whl/cpu torch torchvision torchaudio
+# Apple Silicon (MPS): standard PyPI wheels are fine
+# pip install torch torchvision torchaudio
+
+# Install your package in editable mode (if you have pyproject.toml / setup.cfg)
 pip install -e .
 ```
 
@@ -55,7 +73,7 @@ Create `.env` in the repo root:
 ```env
 # Qdrant
 QDRANT_URL=http://localhost:6333
-QDRANT_API_KEY=
+QDRANT_API_KEY= #optional
 QDRANT_COLLECTION=safebooru_union_clip
 
 # Embeddings
@@ -76,9 +94,18 @@ PROMPT_LOG_LEVEL=DEBUG
 GEMINI_VISION_MODEL=gemini-2.5-flash
 ```
 
-### 4) Create collection & ingest
+### 4) Initialise DB, Create collection & ingest
 
 ```bash
+# Initialize DB with the required configuration
+python lib/qdrant_init.py \
+  --qdrant-url $QDRANT_URL \ 
+  --collection $QDRANT_COLLECTION \
+  --model ViT-bigG-14 \
+  --pretrained laion2b_s39b_b160k \
+  --device cuda \
+  --add-edge-vector
+
 # Retrieval Script retrieve_safebooru.py
 python scripts/retrieve_safebooru.py \
   --tags-file ./tags.txt \

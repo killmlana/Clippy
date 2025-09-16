@@ -5,6 +5,7 @@ description = "Add your description here"
 requires-python = ">=3.13"
 dependencies = [
     "fastapi>=0.116.1",
+    "future>=1.0.0",
     "google-cloud-aiplatform>=1.112.0",
     "openai>=1.107.1",
     "python-multipart==0.0.20",

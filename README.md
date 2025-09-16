@@ -1,7 +1,6 @@
 # Clippy — Style-Aware Image Retrieval & Generation
 
-Clippy is a FastAPI service and script suite for **style-aware visual retrieval** backed by **Qdrant**. It accepts a sketch and/or text prompt, runs **hybrid similarity search** over image/edge/text embeddings, and returns reference images. Generative Image models typically perform much better when references are provided. Especially during style-transfer workflows (transferring one artstyle to the other), references help the model to understand better the differences. 
-The project aims to refine the generative workflow of image generation models by making it easier for artists to retrieve references across various artstyles and use them further to generate better images without having any knowledge of prompt engineering.
+Clippy is a FastAPI service and script suite for **style-aware visual retrieval** backed by **Qdrant**. It accepts a sketch and/or text prompt, runs **hybrid similarity search** over image/edge/text embeddings, and returns reference images. Generative Image models typically perform much better when references are provided. Especially during style-transfer workflows (transferring one artstyle to the other), references help the model to understand better the differences. The project aims to refine the generative workflow of image generation models by making it easier for artists to retrieve references across various artstyles and use them further to generate better images without having any prior knowledge of prompt engineering.
 
 
 ---
@@ -23,7 +22,99 @@ The project aims to refine the generative workflow of image generation models by
 
 ---
 
-## ⛳ Quick Start
+## 🐳 Docker Setup (Recommended)
+
+This is the easiest way to get started with Clippy.
+
+### Requirements
+- **Docker** and **Docker Compose**
+
+### 1) Configure environment
+
+Create a `.env` file in the repository root. The `docker-compose.yml` file is configured to load this file, so all environment variables for the Docker setup should be managed here.
+
+You can copy the example below, but be sure to fill in your Google Cloud credentials if you want to use the image generation features.
+
+```env
+# Qdrant - These are the defaults for the docker-compose setup
+QDRANT_URL=http://qdrant:6333
+QDRANT_API_KEY= #optional
+QDRANT_COLLECTION=safebooru_union_clip
+
+# Embeddings
+OPENCLIP_MODEL=ViT-bigG-14
+OPENCLIP_PRETRAINED=laion2b_s39b_b160k
+OPENCLIP_DEVICE=cpu            # or cuda if you have a GPU and nvidia-docker
+OPENCLIP_PRECISION=fp32
+
+# Ingestion
+IMAGES_ROOT=/app/data/safebooru # This path is inside the container
+
+# Image Gen (Optional)
+GOOGLE_GENAI_USE_VERTEXAI=true
+GOOGLE_CLOUD_PROJECT= # your-gcp-project-id
+GOOGLE_CLOUD_LOCATION= # us-central1
+GOOGLE_APPLICATION_CREDENTIALS= # /app/gcp-credentials.json
+PROMPT_LOG_LEVEL=DEBUG
+GEMINI_VISION_MODEL=gemini-2.5-flash
+```
+
+### 2) Run the application
+
+```bash
+docker-compose up --build
+```
+
+This command will:
+- Build the frontend and backend Docker images.
+- Start the FastAPI application and the Qdrant vector database.
+
+You can access the application at [http://localhost:8000](http://localhost:8000).
+
+### 3) Ingest data
+
+To ingest your data, you'll need to run the ingestion scripts inside the `app` container.
+
+First, place your images in the `data/safebooru` directory (or the directory you specified in `IMAGES_ROOT`).
+
+Then, run the following commands:
+
+```bash
+# Initialize the Qdrant collection
+docker-compose exec app python lib/qdrant_init.py \
+  --qdrant-url $QDRANT_URL \ 
+  --collection $QDRANT_COLLECTION \
+  --model ViT-bigG-14 \
+  --pretrained laion2b_s39b_b160k \
+  --device cuda \
+  --add-edge-vector
+
+# Download the dataset
+docker-compose exec app python scripts/retrieve_safebooru.py \
+  --tags-file ./tags.txt \
+  --out ./data/safebooru \
+  --union --workers 16 --max-pages 20 --resume
+
+# Ingest the images
+docker-compose exec app python qdrant/embed_and_upsert.py \
+  --manifest "$MANIFEST" \
+  --qdrant-url "$QDRANT_URL" \
+  --collection "$QDRANT_COLLECTION" \
+  --model "$MODEL_NAME" --pretrained "$PRETRAINED" \
+  --device "$DEVICE" \
+  --clip-batch 4 --upsert-batch 64 --gc-every 512 \
+  --text-template "an illustration with {tags}"
+```
+
+### 4) Stop the application
+
+```bash
+docker-compose down
+```
+
+---
+
+## ⛳ Manual Setup
 
 ### Requirements
 - Python **3.10+**
@@ -79,8 +170,8 @@ QDRANT_COLLECTION=safebooru_union_clip
 # Embeddings
 OPENCLIP_MODEL=ViT-bigG-14
 OPENCLIP_PRETRAINED=laion2b_s39b_b160k
-DEVICE=cuda            # or cpu
-PRECISION=fp32
+OPENCLIP_DEVICE=cpu            # or cuda if you have a GPU and nvidia-docker
+OPENCLIP_PRECISION=fp32
 
 # Ingestion
 IMAGES_ROOT=/abs/path/to/images

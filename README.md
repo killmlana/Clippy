@@ -89,7 +89,7 @@ docker-compose exec app python lib/qdrant_init.py \
   --device cuda \
   --add-edge-vector
 
-# Download the dataset
+# Download the dataset to the container or add the volume to docker-compose.yml
 docker-compose exec app python scripts/retrieve_safebooru.py \
   --tags-file ./tags.txt \
   --out ./data/safebooru \

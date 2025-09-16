@@ -37,14 +37,6 @@ The project aims to refine the generative workflow of image generation models by
 docker run -p 6333:6333 -p 6334:6334 \
   -v $PWD/qdrant_storage:/qdrant/storage \
   qdrant/qdrant:latest
-
-python lib/qdrant_init.py \
-  --qdrant-url $QDRANT_URL \
-  --collection $QDRANT_COLLECTION \
-  --model ViT-bigG-14 \
-  --pretrained laion2b_s39b_b160k \
-  --device cuda \
-  --add-edge-vector
 ````
 
 ### 2) Create venv & install
@@ -84,9 +76,19 @@ PROMPT_LOG_LEVEL=DEBUG
 GEMINI_VISION_MODEL=gemini-2.5-flash
 ```
 
-### 4) Create collection & ingest
+### 4) Initialise DB, Create collection & ingest
 
 ```bash
+# Initialize DB with the required configuration
+
+python lib/qdrant_init.py \
+  --qdrant-url $QDRANT_URL \ 
+  --collection $QDRANT_COLLECTION \
+  --model ViT-bigG-14 \
+  --pretrained laion2b_s39b_b160k \
+  --device cuda \
+  --add-edge-vector
+
 # Retrieval Script retrieve_safebooru.py
 python scripts/retrieve_safebooru.py \
   --tags-file ./tags.txt \

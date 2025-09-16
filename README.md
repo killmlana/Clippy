@@ -41,10 +41,27 @@ docker run -p 6333:6333 -p 6334:6334 \
 
 ### 2) Create venv & install
 
-```bash
 python -m venv .venv
-source .venv/bin/activate   # Windows: .\.venv\Scripts\activate
-pip install -U pip wheel
+# macOS/Linux
+source .venv/bin/activate
+# Windows
+# .\.venv\Scripts\activate
+
+# Upgrade basics
+pip install -U pip setuptools wheel
+
+# Install project deps from requirements.txt
+pip install -r requirements.txt
+
+# (Optional) If Torch is NOT pinned in requirements.txt or you want a specific build:
+# CUDA 12.1 (Linux/Windows GPU)
+# pip install --index-url https://download.pytorch.org/whl/cu121 torch torchvision torchaudio
+# CPU-only (no GPU)
+# pip install --index-url https://download.pytorch.org/whl/cpu torch torchvision torchaudio
+# Apple Silicon (MPS): standard PyPI wheels are fine
+# pip install torch torchvision torchaudio
+
+# Install your package in editable mode (if you have pyproject.toml / setup.cfg)
 pip install -e .
 ```
 
